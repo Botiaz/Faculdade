@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1692911921 source:c:\users\mateu\onedrive\documentos\github\faculdade\aeds 2\trabalho pratico 1\palindromo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

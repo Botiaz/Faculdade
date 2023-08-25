@@ -15,7 +15,7 @@ int main() {
     }
     fclose(arquivo);
 
-    char inverso[n][20]; // Usar matriz de strings para armazenar os valores invertidos
+    char inverso[n][50]; // Usar matriz de strings para armazenar os valores invertidos
 
     for (int i = 0; i < n; i++) {
         strcpy(inverso[i], v[n - 1 - i]);

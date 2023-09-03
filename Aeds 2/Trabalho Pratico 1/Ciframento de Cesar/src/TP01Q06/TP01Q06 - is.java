@@ -53,5 +53,6 @@ public class Vogal {
 
         System.out.println((vogal ? "SIM" : "NAO") + " " + (consoante ? "SIM" : "NAO") + " " +
                 (inteiro ? "SIM" : "NAO") + " " + (real ? "SIM" : "NAO"));
+        input.close();
     }
 }

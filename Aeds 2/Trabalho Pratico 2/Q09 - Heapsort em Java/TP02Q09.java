@@ -160,7 +160,7 @@ static class Jogador {
 
     try {
         // Leitura do arquivo CSV e preenchimento da lista de jogadores
-        FileReader fileReader = new FileReader("/tmp/playersAtualizado.csv");
+        FileReader fileReader = new FileReader("/tmp/players.csv");
         BufferedReader arquivo = new BufferedReader(fileReader);
         arquivo.readLine(); // Ignora o cabeçalho
         while (arquivo.ready()) {

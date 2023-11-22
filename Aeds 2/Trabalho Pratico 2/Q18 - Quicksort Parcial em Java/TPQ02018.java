@@ -152,7 +152,7 @@ public static void main(String[] args) {
     
     try{
         // Leitura do arquivo players.csv
-        FileReader leitorArquivo = new FileReader("/tmp/playersAtualizado.csv");
+        FileReader leitorArquivo = new FileReader("/tmp/players.csv");
         BufferedReader arquivo = new BufferedReader(leitorArquivo);   
         
         // Ignora a primeira linha (cabeçalho) do arquivo CSV

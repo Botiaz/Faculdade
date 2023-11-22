@@ -152,7 +152,7 @@ public class TP02Q07 {
 
         try {
             // Lendo dados do arquivo players.csv e populando a lista de jogadores
-            FileReader leitorArquivo = new FileReader("/tmp/playersAtualizado.csv");
+            FileReader leitorArquivo = new FileReader("/tmp/players.csv");
             BufferedReader arquivo = new BufferedReader(leitorArquivo);   
             arquivo.readLine(); // Ignorando a primeira linha (cabeçalho)
             while (arquivo.ready()) {

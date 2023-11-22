@@ -80,7 +80,7 @@ typedef struct Jogador{
     void ler(Jogador *jogador, char linha[1000]){
         char id[10];
         char nome[40];
-        char altura[40];            
+        char altura[40];
         char peso[40];
         char universidade[100];
         char anoNascimento[40];
@@ -91,10 +91,10 @@ typedef struct Jogador{
         contVirgula = 0;
         for(int i = 0; i < strlen(linha); i++){
             if(linha[i] == ','){
-                virgulas[contVirgula++] = i;               
+                virgulas[contVirgula++] = i;
             }
         }
-    
+
         int j;
         for(j = 0; j < virgulas[0]; j++){
             id[j] = linha[j];
@@ -121,8 +121,8 @@ typedef struct Jogador{
             peso[k++] = linha[j];
         }
         peso[k] = '\0';
-        int Peso = atoi(peso);  
-        setPeso(jogador, Peso);     
+        int Peso = atoi(peso);
+        setPeso(jogador, Peso);
         k = 0;
         if(virgulas[4] - virgulas[3] == 1){
             strcpy(universidade, "nao informado\0");
@@ -132,8 +132,8 @@ typedef struct Jogador{
                 universidade[k++] = linha[j];
             }
             universidade[k] = '\0';
-        }   
-        setUniversidade(jogador, universidade);  
+        }
+        setUniversidade(jogador, universidade);
         k = 0;
         for (j = virgulas[4] + 1; j < virgulas[5]; j++) {
             anoNascimento[k++] = linha[j];
@@ -170,7 +170,7 @@ typedef struct Jogador{
         int estado_len = strlen(estado);
 
         if (estado_len > 0 && estado[estado_len - 1] == ',') {
-            estado[estado_len - 1] = '\0';  
+            estado[estado_len - 1] = '\0';
         }
         printf("[%d ## %s ## %d ## %d ## %d ## %s ## %s ## %s]\n", getID(&jogador), getNome(&jogador), getAltura(&jogador), getPeso(&jogador), getAno(&jogador), getUniversidade(&jogador), getCidade(&jogador), getEstadoNascimento(&jogador));
 
@@ -186,7 +186,7 @@ typedef struct Jogador{
 
     void radixsort(Jogador *array, int n, int exp) {
         Jogador output[n];
-        int count[10] = {0}; 
+        int count[10] = {0};
         for (int i = 0; i < n; i++) {
             int id = getID(&array[i]);
             int digit = getDigito(id, exp);
@@ -232,13 +232,13 @@ int main(void) {
     Jogador jogador[4000];
 
     FILE *arq;
-    arq = fopen("/tmp/playersAtualizado.csv", "r, ccs=UTF-8");
+    arq = fopen("/tmp/players.csv", "r, ccs=UTF-8");
     char linha[1000];
     int virgulas[7];
     int contVirgula;
     fgets(linha, 1000, arq);
     int cont = 0;
-    while(fgets(linha, 1000, arq)){       
+    while(fgets(linha, 1000, arq)){
         ler(&jogador[cont++], linha);
 
     }

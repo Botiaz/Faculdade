@@ -153,7 +153,7 @@ public class TP02Q011 {
         
         try {
             // Ler dados do arquivo players.csv
-            FileReader leitorArquivo = new FileReader("/tmp/playersAtualizado.csv");
+            FileReader leitorArquivo = new FileReader("/tmp/players.csv");
             BufferedReader arquivo = new BufferedReader(leitorArquivo);
             arquivo.readLine(); // Ignorar cabeçalho do arquivo
             while (arquivo.ready()) {

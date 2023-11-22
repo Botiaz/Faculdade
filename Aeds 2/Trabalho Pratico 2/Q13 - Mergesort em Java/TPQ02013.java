@@ -165,7 +165,7 @@ public class TPQ02013 {
 
     try {
         // Lê dados do arquivo e cria objetos Jogador
-        FileReader leitorArquivo = new FileReader("/tmp/playersAtualizado.csv");
+        FileReader leitorArquivo = new FileReader("/tmp/players.csv");
         BufferedReader arquivo = new BufferedReader(leitorArquivo);   
         arquivo.readLine(); // Ignora a primeira linha (cabeçalho)
         while (arquivo.ready()) {

@@ -150,7 +150,7 @@ public class TP02Q05 {
         ArrayList<Jogador> jogadores = new ArrayList<>();
         
         try{
-            FileReader fileReader = new FileReader("/tmp/playersAtualizado.csv");
+            FileReader fileReader = new FileReader("/tmp/players.csv");
             BufferedReader arquivo = new BufferedReader(fileReader);   
             arquivo.readLine();
             while (arquivo.ready()) {

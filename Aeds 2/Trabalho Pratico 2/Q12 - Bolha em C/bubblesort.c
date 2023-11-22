@@ -82,7 +82,7 @@ typedef struct Jogador{
     void ler(Jogador *jogador, char linha[1000]){
         char id[10];
         char nome[40];
-        char altura[40];            
+        char altura[40];
         char peso[40];
         char universidade[100];
         char anoNascimento[40];
@@ -95,7 +95,7 @@ typedef struct Jogador{
         contVirgula = 0;
         for(int i = 0; i < strlen(linha); i++){
             if(linha[i] == ','){
-                virgulas[contVirgula++] = i;               
+                virgulas[contVirgula++] = i;
             }
         }
         //for da id
@@ -131,8 +131,8 @@ typedef struct Jogador{
             peso[k++] = linha[j];
         }
         peso[k] = '\0';
-        int Peso = atoi(peso);  
-        setPeso(jogador, Peso);     
+        int Peso = atoi(peso);
+        setPeso(jogador, Peso);
 
         // Extraindo a universidade
         k = 0;
@@ -144,8 +144,8 @@ typedef struct Jogador{
                 universidade[k++] = linha[j];
             }
             universidade[k] = '\0';
-        }   
-        setUniversidade(jogador, universidade);  
+        }
+        setUniversidade(jogador, universidade);
 
         // Extraindo o ano de nascimento
         k = 0;
@@ -203,9 +203,9 @@ typedef struct Jogador{
 
 int main(void) {
     Jogador jogador[4000];
-    
+
     FILE *arq;
-    arq = fopen("/tmp/playersAtualizado.csv", "r, ccs=UTF-8");
+    arq = fopen("/tmp/players.csv", "r, ccs=UTF-8");
     char linha[1000];
     int virgulas[7];
     int contVirgula;
@@ -214,7 +214,7 @@ int main(void) {
     int cont = 0;
 
     //lendo todas as linhas do arquivo
-    while(fgets(linha, 1000, arq)){       
+    while(fgets(linha, 1000, arq)){
         ler(&jogador[cont++], linha);
 
     }

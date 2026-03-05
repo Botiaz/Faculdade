@@ -1,0 +1,17 @@
+name: api_app
+description: Um app Flutter para mostrar skins de CS:GO
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  http: ^1.2.0  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

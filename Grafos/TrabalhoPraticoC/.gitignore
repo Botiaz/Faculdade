@@ -1,0 +1,14 @@
+# Compiled Java bytecode
+*.class
+
+# Common Java build directories
+bin/
+out/
+build/
+target/
+
+# VS Code and Java extension workspace artifacts
+.vscode/
+.classpath
+.project
+.settings/
